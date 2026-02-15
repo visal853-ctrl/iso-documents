@@ -1,0 +1,18 @@
+Control Number,Control Name,Applicability,Implementation Status,Risk Treatment Plan,Responsible Owner,Completion Date
+A.5.1,Information Security Policy,Applicable,Planned,Implement controls,Alice Smith,2026-12-30
+A.5.2,Information Security Organization,Applicable,In Progress,Assess and mitigate,Bob Johnson,2026-04-15
+A.6.1,Internal Organization,Applicable,Planned,Implement structures,John Doe,2026-06-01
+A.6.2,Mobile Device Policy,Applicable,Planned,Define policy,Jane Doe,2026-07-15
+A.7.1,Human Resource Security,Applicable,Implemented,Train all personnel,Richard Roe,2026-11-20
+A.8.1,Asset Identification,Applicable,Planned,Inventory assets,Mary Major,2026-09-10
+A.9.1,Access Control Policy,Applicable,In Progress,Define access levels,Alex Addition,2026-05-20
+A.10.1,Cryptographic controls,Applicable,Planned,Implement encryption,Bob Coder,2026-03-01
+A.11.1,Physical Security,Applicable,Planned,Secure areas,Tim Security,2026-08-30
+A.12.1,Operational Procedures,Applicable,In Progress,Document procedures,Sara Ops,2026-10-10
+A.12.2,Change Management,Applicable,Planned,Implement changes,Harriet Change,2026-02-28
+A.13.1,Network Security,Applicable,In Progress,Monitor network,Victor V,2026-03-15
+A.14.1,System Acquisition,Applicable,Implemented,Review suppliers,Daniel Supplier,2026-04-25
+A.15.1,Supplier Relationships,Applicable,Planned,Establish controls,John Supplier,2026-05-30
+A.16.1,Information Security Incident Management,Applicable,Implemented,Incident response team,Kim Incident,2026-07-01
+A.17.1,Information Security Continuity,Applicable,Planned,Develop continuity plan,Sam Continuity,2026-06-15
+A.18.1,Compliance,Applicable,In Progress,Regular audits,Pat Compliance,2026-12-15
