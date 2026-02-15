@@ -1,0 +1,4 @@
+| Risk ID | Risk Description | Likelihood | Impact | Risk Level | Mitigation Strategy | Owner | Review Date | Status |
+|---------|------------------|------------|--------|------------|---------------------|-------|-------------|--------|
+| 1       | Data Breach      | High       | High   | Critical   | Implement encryption | John Doe | 2026-02-15  | Open   |
+| 2       | Phishing Attack   | Medium     | High   | High       | Employee training    | Jane Smith | 2026-02-15  | Open   |
