@@ -1,0 +1,325 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1780 1120" width="1780" height="1120" font-family="system-ui, -apple-system, sans-serif" font-size="12">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M1 1L9 5L1 9" fill="none" stroke="#3D3D3A" stroke-width="1.6"/>
+    </marker>
+    <marker id="arr-b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M1 1L9 5L1 9" fill="none" stroke="#185FA5" stroke-width="1.6"/>
+    </marker>
+    <marker id="arr-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M1 1L9 5L1 9" fill="none" stroke="#0F6E56" stroke-width="1.6"/>
+    </marker>
+    <marker id="arr-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M1 1L9 5L1 9" fill="none" stroke="#854F0B" stroke-width="1.6"/>
+    </marker>
+  </defs>
+
+  <rect width="1780" height="1120" fill="#FAF9F7"/>
+
+  <!-- TITLE -->
+  <rect x="0" y="0" width="1780" height="56" fill="#2C2C2A"/>
+  <text x="24" y="24" fill="#FFFFFF" font-size="16" font-weight="500">NC current-state operating model — dependencies from the engineer’s workspace out</text>
+  <text x="24" y="44" fill="#B4B2A9" font-size="11">Innermost layer = vCloud Director. Every ring outside it is something that workspace sits on. Shapes follow Lucidchart conventions.</text>
+  <text x="1420" y="24" fill="#B4B2A9" font-size="10">Draft for workshop</text>
+  <text x="1420" y="42" fill="#B4B2A9" font-size="10">Assumed: Mannheim NC pattern + vCD</text>
+
+  <!-- HOW TO READ -->
+  <rect x="24" y="68" width="1732" height="36" rx="5" fill="#FFFFFF" stroke="#D3D1C7"/>
+  <text x="40" y="91" fill="#444441" font-size="12">How to read this. The engineer only works in the centre. Each ring around that centre is a dependency — take a ring away and the ring inside it stops working. Access comes in from the left, through the jump server. Ownership is labelled on the right of each ring.</text>
+
+  <!-- ════════════════════════════════════════════
+       OUTER RING — PHYSICAL + ACCESS
+       ════════════════════════════════════════════ -->
+  <rect x="24" y="116" width="1280" height="760" rx="18" fill="#FAEEDA" stroke="#854F0B" stroke-width="2"/>
+  <text x="44" y="142" fill="#633806" font-size="13" font-weight="500">OUTER RING · physical kit and the access path</text>
+  <text x="44" y="158" fill="#854F0B" font-size="11">Nothing in the inner rings exists without this. Invisible to the engineer.</text>
+
+  <!-- access path — Lucid: terminator + process + cylinder -->
+  <text x="44" y="186" fill="#633806" font-size="11" font-weight="500">Access path into the centre</text>
+
+  <!-- Terminator / stadium = start -->
+  <rect x="44" y="198" width="150" height="40" rx="20" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.3"/>
+  <text x="119" y="216" text-anchor="middle" fill="#0C447C" font-size="11" font-weight="500">Engineer laptop</text>
+  <text x="119" y="230" text-anchor="middle" fill="#185FA5" font-size="9">Lucid: terminator</text>
+
+  <path d="M194 218 L228 218" fill="none" stroke="#185FA5" stroke-width="1.6" marker-end="url(#arr-b)"/>
+
+  <!-- Rounded process = VPN -->
+  <rect x="232" y="198" width="168" height="40" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.3"/>
+  <text x="316" y="216" text-anchor="middle" fill="#0C447C" font-size="11" font-weight="500">VPN / managed net</text>
+  <text x="316" y="230" text-anchor="middle" fill="#185FA5" font-size="9">Lucid: rounded process</text>
+
+  <path d="M400 218 L434 218" fill="none" stroke="#185FA5" stroke-width="1.6" marker-end="url(#arr-b)"/>
+
+  <!-- Cylinder = jump server -->
+  <g transform="translate(438,192)">
+    <ellipse cx="80" cy="10" rx="80" ry="10" fill="#FFFFFF" stroke="#185FA5" stroke-width="1.4"/>
+    <rect x="0" y="10" width="160" height="28" fill="#FFFFFF"/>
+    <ellipse cx="80" cy="38" rx="80" ry="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.4"/>
+    <line x1="0" y1="10" x2="0" y2="38" stroke="#185FA5" stroke-width="1.4"/>
+    <line x1="160" y1="10" x2="160" y2="38" stroke="#185FA5" stroke-width="1.4"/>
+    <text x="80" y="24" text-anchor="middle" fill="#0C447C" font-size="11" font-weight="500">Jump server</text>
+    <text x="80" y="36" text-anchor="middle" fill="#185FA5" font-size="8">Lucid: cylinder / data store</text>
+  </g>
+
+  <path d="M598 218 L640 218 L640 300" fill="none" stroke="#185FA5" stroke-width="1.8" marker-end="url(#arr-b)"/>
+  <text x="652" y="250" fill="#185FA5" font-size="10">only way in</text>
+
+  <rect x="620" y="198" width="200" height="40" rx="5" fill="#FEF6DB" stroke="#D4A72C" stroke-width="0.8"/>
+  <text x="720" y="216" text-anchor="middle" fill="#5C4813" font-size="10">Lobby, not the room.</text>
+  <text x="720" y="230" text-anchor="middle" fill="#856419" font-size="9">No direct path from laptop to vCenter.</text>
+
+  <!-- physical machines along bottom of outer ring — cylinders -->
+  <text x="44" y="790" fill="#633806" font-size="11" font-weight="500">Physical machines this ring is made of</text>
+
+  <g transform="translate(44,800)">
+    <ellipse cx="70" cy="8" rx="70" ry="8" fill="#FFFFFF" stroke="#854F0B" stroke-width="1.1"/>
+    <rect x="0" y="8" width="140" height="22" fill="#FFFFFF"/>
+    <ellipse cx="70" cy="30" rx="70" ry="8" fill="#FAEEDA" stroke="#854F0B" stroke-width="1.1"/>
+    <line x1="0" y1="8" x2="0" y2="30" stroke="#854F0B" stroke-width="1.1"/>
+    <line x1="140" y1="8" x2="140" y2="30" stroke="#854F0B" stroke-width="1.1"/>
+    <text x="70" y="24" text-anchor="middle" fill="#633806" font-size="10">Blade / rack servers</text>
+  </g>
+  <g transform="translate(200,800)">
+    <ellipse cx="70" cy="8" rx="70" ry="8" fill="#FFFFFF" stroke="#854F0B" stroke-width="1.1"/>
+    <rect x="0" y="8" width="140" height="22" fill="#FFFFFF"/>
+    <ellipse cx="70" cy="30" rx="70" ry="8" fill="#FAEEDA" stroke="#854F0B" stroke-width="1.1"/>
+    <line x1="0" y1="8" x2="0" y2="30" stroke="#854F0B" stroke-width="1.1"/>
+    <line x1="140" y1="8" x2="140" y2="30" stroke="#854F0B" stroke-width="1.1"/>
+    <text x="70" y="24" text-anchor="middle" fill="#633806" font-size="10">Storage arrays</text>
+  </g>
+  <g transform="translate(356,800)">
+    <ellipse cx="70" cy="8" rx="70" ry="8" fill="#FFFFFF" stroke="#854F0B" stroke-width="1.1"/>
+    <rect x="0" y="8" width="140" height="22" fill="#FFFFFF"/>
+    <ellipse cx="70" cy="30" rx="70" ry="8" fill="#FAEEDA" stroke="#854F0B" stroke-width="1.1"/>
+    <line x1="0" y1="8" x2="0" y2="30" stroke="#854F0B" stroke-width="1.1"/>
+    <line x1="140" y1="8" x2="140" y2="30" stroke="#854F0B" stroke-width="1.1"/>
+    <text x="70" y="24" text-anchor="middle" fill="#633806" font-size="10">Network switches</text>
+  </g>
+  <g transform="translate(512,800)">
+    <ellipse cx="70" cy="8" rx="70" ry="8" fill="#FFFFFF" stroke="#854F0B" stroke-width="1.1"/>
+    <rect x="0" y="8" width="140" height="22" fill="#FFFFFF"/>
+    <ellipse cx="70" cy="30" rx="70" ry="8" fill="#FAEEDA" stroke="#854F0B" stroke-width="1.1"/>
+    <line x1="0" y1="8" x2="0" y2="30" stroke="#854F0B" stroke-width="1.1"/>
+    <line x1="140" y1="8" x2="140" y2="30" stroke="#854F0B" stroke-width="1.1"/>
+    <text x="70" y="24" text-anchor="middle" fill="#633806" font-size="10">Firewalls</text>
+  </g>
+  <g transform="translate(668,800)">
+    <ellipse cx="80" cy="8" rx="80" ry="8" fill="#FFFFFF" stroke="#854F0B" stroke-width="1.1"/>
+    <rect x="0" y="8" width="160" height="22" fill="#FFFFFF"/>
+    <ellipse cx="80" cy="30" rx="80" ry="8" fill="#FAEEDA" stroke="#854F0B" stroke-width="1.1"/>
+    <line x1="0" y1="8" x2="0" y2="30" stroke="#854F0B" stroke-width="1.1"/>
+    <line x1="160" y1="8" x2="160" y2="30" stroke="#854F0B" stroke-width="1.1"/>
+    <text x="80" y="24" text-anchor="middle" fill="#633806" font-size="10">Jump-server compute</text>
+  </g>
+  <text x="980" y="824" fill="#854F0B" font-size="10">Lucid: cylinder for every machine</text>
+
+  <!-- outer owner pill -->
+  <rect x="1088" y="132" width="196" height="28" rx="14" fill="#854F0B"/>
+  <text x="1186" y="151" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="500">Owner: TechOps</text>
+
+  <!-- ════════════════════════════════════════════
+       MIDDLE RING — PLATFORM
+       ════════════════════════════════════════════ -->
+  <rect x="84" y="256" width="1160" height="520" rx="16" fill="#E1F5EE" stroke="#0F6E56" stroke-width="2"/>
+  <text x="104" y="280" fill="#085041" font-size="13" font-weight="500">MIDDLE RING · platform the portal sits on</text>
+  <text x="104" y="296" fill="#0F6E56" font-size="11">vCloud Director cannot place a VM unless these four things answer the request.</text>
+
+  <rect x="1028" y="268" width="196" height="28" rx="14" fill="#0F6E56"/>
+  <text x="1126" y="287" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="500">Owner: TechOps</text>
+
+  <!-- dependency caption -->
+  <text x="664" y="318" text-anchor="middle" fill="#085041" font-size="11">depends on ↓</text>
+
+  <!-- four platform products in a row -->
+  <!-- vCenter — process rectangle -->
+  <rect x="120" y="332" width="240" height="72" fill="#FFFFFF" stroke="#0F6E56" stroke-width="1.4"/>
+  <text x="240" y="354" text-anchor="middle" fill="#085041" font-size="13" font-weight="500">vCenter</text>
+  <text x="240" y="372" text-anchor="middle" fill="#0F6E56" font-size="10">orchestration brain</text>
+  <text x="240" y="386" text-anchor="middle" fill="#5F5E5A" font-size="9">picks a host · manages VM lifecycle</text>
+  <text x="240" y="398" text-anchor="middle" fill="#888780" font-size="8">Lucid: process</text>
+
+  <!-- ESXi — process -->
+  <rect x="380" y="332" width="240" height="72" fill="#FFFFFF" stroke="#0F6E56" stroke-width="1.4"/>
+  <text x="500" y="354" text-anchor="middle" fill="#085041" font-size="13" font-weight="500">ESXi</text>
+  <text x="500" y="372" text-anchor="middle" fill="#0F6E56" font-size="10">hypervisor on the host</text>
+  <text x="500" y="386" text-anchor="middle" fill="#5F5E5A" font-size="9">CPU and memory live here</text>
+  <text x="500" y="398" text-anchor="middle" fill="#888780" font-size="8">Lucid: process</text>
+
+  <!-- SAN — cylinder -->
+  <g transform="translate(640,328)">
+    <ellipse cx="120" cy="12" rx="120" ry="12" fill="#FFFFFF" stroke="#0F6E56" stroke-width="1.4"/>
+    <rect x="0" y="12" width="240" height="48" fill="#FFFFFF"/>
+    <ellipse cx="120" cy="60" rx="120" ry="12" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.4"/>
+    <line x1="0" y1="12" x2="0" y2="60" stroke="#0F6E56" stroke-width="1.4"/>
+    <line x1="240" y1="12" x2="240" y2="60" stroke="#0F6E56" stroke-width="1.4"/>
+    <text x="120" y="34" text-anchor="middle" fill="#085041" font-size="13" font-weight="500">Shared storage / SAN</text>
+    <text x="120" y="50" text-anchor="middle" fill="#0F6E56" font-size="10">why clone feels instant</text>
+    <text x="120" y="62" text-anchor="middle" fill="#888780" font-size="8">Lucid: data store / cylinder</text>
+  </g>
+
+  <!-- Network — two process boxes dashed -->
+  <rect x="900" y="332" width="150" height="72" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.3" stroke-dasharray="5 3"/>
+  <text x="975" y="356" text-anchor="middle" fill="#633806" font-size="12" font-weight="500">AlgoSec</text>
+  <text x="975" y="372" text-anchor="middle" fill="#854F0B" font-size="9">policy engine</text>
+  <text x="975" y="386" text-anchor="middle" fill="#888780" font-size="8">Lucid: process · dashed</text>
+
+  <rect x="1060" y="332" width="150" height="72" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.3" stroke-dasharray="5 3"/>
+  <text x="1135" y="356" text-anchor="middle" fill="#633806" font-size="12" font-weight="500">Palo Alto</text>
+  <text x="1135" y="372" text-anchor="middle" fill="#854F0B" font-size="9">firewall</text>
+  <text x="1135" y="386" text-anchor="middle" fill="#888780" font-size="8">Lucid: process · dashed</text>
+
+  <!-- arrows between platform: vCenter commands ESXi, ESXi uses SAN, network beside -->
+  <path d="M360 368 L376 368" fill="none" stroke="#0F6E56" stroke-width="1.5" marker-end="url(#arr-g)"/>
+  <path d="M620 368 L636 368" fill="none" stroke="#0F6E56" stroke-width="1.5" marker-end="url(#arr-g)"/>
+
+  <rect x="900" y="414" width="310" height="28" rx="4" fill="#FFFFFF" stroke="#BA7517" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="1055" y="433" text-anchor="middle" fill="#854F0B" font-size="10">Seen elsewhere. Not confirmed as NC’s pair.</text>
+
+  <rect x="640" y="414" width="240" height="28" rx="4" fill="#FAEEDA" stroke="#BA7517" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="760" y="433" text-anchor="middle" fill="#854F0B" font-size="10">Array type not confirmed for NC</text>
+
+  <!-- depends-on chevrons into inner ring -->
+  <text x="664" y="468" text-anchor="middle" fill="#085041" font-size="11">the centre depends on this ring  ↓</text>
+
+  <!-- ════════════════════════════════════════════
+       INNER FENCE — RESOURCE POOL
+       ════════════════════════════════════════════ -->
+  <!-- Lucid: preparation / hexagon used as a wide hexagonal frame is awkward;
+       use a thick-bordered rounded rect + hexagon badge, which Lucid users will
+       recognise as the 'preparation / constraint' shape. -->
+  <rect x="200" y="484" width="920" height="268" rx="14" fill="#EAF3DE" stroke="#3B6D11" stroke-width="3"/>
+  <polygon points="220,498 248,484 276,498 276,522 248,536 220,522" fill="#3B6D11"/>
+  <text x="340" y="516" fill="#27500A" font-size="13" font-weight="500">INNER FENCE · project resource pool</text>
+  <text x="200" y="0" fill="none"/>
+  <text x="340" y="534" fill="#3B6D11" font-size="11">Lucid: preparation / hexagon = constraint. Engineer is self-service only inside this line.</text>
+
+  <rect x="900" y="496" width="196" height="28" rx="14" fill="#3B6D11"/>
+  <text x="998" y="515" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="500">Fence owned by TechOps</text>
+
+  <!-- ════════════════════════════════════════════
+       CORE — ENGINEER + vCLOUD DIRECTOR
+       ════════════════════════════════════════════ -->
+  <rect x="280" y="552" width="760" height="176" rx="12" fill="#2C2C2A"/>
+  <text x="660" y="576" text-anchor="middle" fill="#B4B2A9" font-size="11">INNERMOST LAYER · where the engineer works</text>
+
+  <!-- Actor — Lucid person -->
+  <circle cx="360" cy="624" r="16" fill="#EEEDFE" stroke="#CECBF6" stroke-width="1.4"/>
+  <path d="M360 640 C360 640 328 648 328 672 L392 672 C392 648 360 640 360 640Z" fill="#EEEDFE" stroke="#CECBF6" stroke-width="1.4"/>
+  <text x="360" y="692" text-anchor="middle" fill="#CECBF6" font-size="10">Engineer</text>
+  <text x="360" y="706" text-anchor="middle" fill="#888780" font-size="8">Lucid: actor</text>
+
+  <!-- vCloud Director — cloud-ish rounded process, the portal -->
+  <rect x="430" y="598" width="280" height="88" rx="16" fill="#EEEDFE" stroke="#CECBF6" stroke-width="1.8"/>
+  <text x="570" y="626" text-anchor="middle" fill="#FFFFFF" font-size="8" fill-opacity="0"/>
+  <text x="570" y="624" text-anchor="middle" fill="#3C3489" font-size="14" font-weight="500">vCloud Director</text>
+  <text x="570" y="644" text-anchor="middle" fill="#534AB7" font-size="11">self-service portal</text>
+  <text x="570" y="662" text-anchor="middle" fill="#5F5E5A" font-size="9">Lucid: rounded process / display</text>
+  <text x="570" y="674" text-anchor="middle" fill="#5F5E5A" font-size="9">ordering counter, not the kitchen</text>
+
+  <path d="M392 636 L426 636" fill="none" stroke="#CECBF6" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- actions — small process boxes -->
+  <rect x="732" y="598" width="86" height="28" fill="#EEEDFE" stroke="#CECBF6" stroke-width="0.9"/>
+  <text x="775" y="617" text-anchor="middle" fill="#3C3489" font-size="10">Deploy</text>
+  <rect x="826" y="598" width="86" height="28" fill="#EEEDFE" stroke="#CECBF6" stroke-width="0.9"/>
+  <text x="869" y="617" text-anchor="middle" fill="#3C3489" font-size="10">Clone</text>
+  <rect x="920" y="598" width="96" height="28" fill="#EEEDFE" stroke="#CECBF6" stroke-width="0.9"/>
+  <text x="968" y="617" text-anchor="middle" fill="#3C3489" font-size="10">Snapshot</text>
+  <rect x="732" y="634" width="86" height="28" fill="#EEEDFE" stroke="#CECBF6" stroke-width="0.9"/>
+  <text x="775" y="653" text-anchor="middle" fill="#3C3489" font-size="10">Power</text>
+  <rect x="826" y="634" width="190" height="28" fill="#EEEDFE" stroke="#CECBF6" stroke-width="0.9"/>
+  <text x="921" y="653" text-anchor="middle" fill="#3C3489" font-size="10">Templates</text>
+  <text x="874" y="680" text-anchor="middle" fill="#B4B2A9" font-size="9">Lucid: process  ·  the only verbs the engineer has</text>
+
+  <rect x="900" y="696" width="196" height="24" rx="12" fill="#534AB7"/>
+  <text x="998" y="713" text-anchor="middle" fill="#FFFFFF" font-size="10" font-weight="500">Owner: Engineer  ·  day-to-day only</text>
+
+  <!-- ════════════════════════════════════════════
+       RIGHT COLUMN — DEPENDENCY + OWNERSHIP READOUT
+       ════════════════════════════════════════════ -->
+  <rect x="1324" y="116" width="432" height="760" rx="10" fill="#FFFFFF" stroke="#D3D1C7"/>
+  <text x="1344" y="144" fill="#2C2C2A" font-size="13" font-weight="500">What depends on what</text>
+  <text x="1344" y="162" fill="#5F5E5A" font-size="11">Read from the centre outward.</text>
+
+  <text x="1344" y="192" fill="#3C3489" font-size="12" font-weight="500">1. Centre</text>
+  <text x="1344" y="210" fill="#444441" font-size="11">Engineer works only in vCloud Director.</text>
+  <text x="1344" y="226" fill="#444441" font-size="11">Five verbs: deploy, clone, snapshot,</text>
+  <text x="1344" y="242" fill="#444441" font-size="11">power, templates.</text>
+
+  <text x="1344" y="272" fill="#3B6D11" font-size="12" font-weight="500">2. Fence around the centre</text>
+  <text x="1344" y="290" fill="#444441" font-size="11">Project resource pool. TechOps draws it.</text>
+  <text x="1344" y="306" fill="#444441" font-size="11">Self-service stops at this line.</text>
+
+  <text x="1344" y="336" fill="#0F6E56" font-size="12" font-weight="500">3. Centre depends on the platform</text>
+  <text x="1344" y="354" fill="#444441" font-size="11">A click in vCD becomes a vCenter command.</text>
+  <text x="1344" y="370" fill="#444441" font-size="11">vCenter places work on ESXi.</text>
+  <text x="1344" y="386" fill="#444441" font-size="11">ESXi reads and writes the SAN.</text>
+  <text x="1344" y="402" fill="#444441" font-size="11">AlgoSec + Palo Alto (unverified) give</text>
+  <text x="1344" y="418" fill="#444441" font-size="11">the new VM a path and a boundary.</text>
+
+  <text x="1344" y="448" fill="#854F0B" font-size="12" font-weight="500">4. Platform depends on the kit</text>
+  <text x="1344" y="466" fill="#444441" font-size="11">Blades, arrays, switches, firewalls,</text>
+  <text x="1344" y="482" fill="#444441" font-size="11">and the jump-server machines themselves.</text>
+  <text x="1344" y="498" fill="#444441" font-size="11">If a host dies, TechOps is paged. Not the engineer.</text>
+
+  <text x="1344" y="528" fill="#185FA5" font-size="12" font-weight="500">5. Access is not a layer of work</text>
+  <text x="1344" y="546" fill="#444441" font-size="11">Laptop → VPN → jump server is only how</text>
+  <text x="1344" y="562" fill="#444441" font-size="11">the engineer reaches the centre.</text>
+  <text x="1344" y="578" fill="#444441" font-size="11">It is not something they operate.</text>
+
+  <rect x="1344" y="600" width="392" height="84" rx="6" fill="#EAF3DE" stroke="#3B6D11"/>
+  <text x="1360" y="624" fill="#27500A" font-size="12" font-weight="500">The operating model in one sentence</text>
+  <text x="1360" y="644" fill="#444441" font-size="11">The engineer is self-service inside a fence.</text>
+  <text x="1360" y="660" fill="#444441" font-size="11">Everything the fence sits on is TechOps.</text>
+  <text x="1360" y="676" fill="#444441" font-size="11">vCloud Director is the only shared surface.</text>
+
+  <!-- workshop diamond -->
+  <polygon points="1540,720 1688,758 1540,796 1392,758" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5"/>
+  <text x="1540" y="752" text-anchor="middle" fill="#3C3489" font-size="11" font-weight="500">Does this fence move,</text>
+  <text x="1540" y="768" text-anchor="middle" fill="#3C3489" font-size="11" font-weight="500">stay, or get redrawn</text>
+  <text x="1540" y="784" text-anchor="middle" fill="#3C3489" font-size="11" font-weight="500">under ATLAS?</text>
+  <text x="1540" y="820" text-anchor="middle" fill="#5F5E5A" font-size="10">Lucid: decision</text>
+  <text x="1540" y="848" text-anchor="middle" fill="#5F5E5A" font-size="10">The argument is the fence.</text>
+  <text x="1540" y="862" text-anchor="middle" fill="#5F5E5A" font-size="10">Not the brand of hypervisor.</text>
+
+  <!-- LEGEND -->
+  <rect x="24" y="892" width="1732" height="204" rx="8" fill="#FFFFFF" stroke="#D3D1C7"/>
+  <text x="40" y="916" fill="#2C2C2A" font-size="13" font-weight="500">Lucidchart shape map — rebuild with these exact shapes</text>
+
+  <rect x="40" y="936" width="90" height="24" rx="12" fill="#E6F1FB" stroke="#185FA5"/>
+  <text x="144" y="953" fill="#444441" font-size="11">Terminator — start of a path (laptop)</text>
+
+  <rect x="430" y="936" width="90" height="24" rx="6" fill="#E6F1FB" stroke="#185FA5"/>
+  <text x="534" y="953" fill="#444441" font-size="11">Rounded process — interface (VPN, vCloud Director portal)</text>
+
+  <rect x="900" y="936" width="90" height="24" fill="#E1F5EE" stroke="#0F6E56"/>
+  <text x="1004" y="953" fill="#444441" font-size="11">Process — named product (vCenter, ESXi, AlgoSec, Palo Alto)</text>
+
+  <g transform="translate(40,976)">
+    <ellipse cx="45" cy="8" rx="45" ry="8" fill="#FAEEDA" stroke="#854F0B"/>
+    <rect x="0" y="8" width="90" height="12" fill="#FAEEDA"/>
+    <ellipse cx="45" cy="20" rx="45" ry="8" fill="#FAEEDA" stroke="#854F0B"/>
+    <line x1="0" y1="8" x2="0" y2="20" stroke="#854F0B"/>
+    <line x1="90" y1="8" x2="90" y2="20" stroke="#854F0B"/>
+  </g>
+  <text x="144" y="996" fill="#444441" font-size="11">Data store / cylinder — any machine or array (jump server, SAN, blades, switches)</text>
+
+  <circle cx="445" cy="990" r="8" fill="#EEEDFE" stroke="#534AB7"/>
+  <path d="M445 998 C445 998 430 1002 430 1014 L460 1014 C460 1002 445 998 445 998Z" fill="#EEEDFE" stroke="#534AB7"/>
+  <text x="534" y="1004" fill="#444441" font-size="11">Actor — the engineer</text>
+
+  <polygon points="914,980 938,968 962,980 962,1000 938,1012 914,1000" fill="#EAF3DE" stroke="#3B6D11"/>
+  <text x="1004" y="996" fill="#444441" font-size="11">Preparation / hexagon — the resource-pool constraint</text>
+
+  <rect x="40" y="1028" width="90" height="20" rx="10" fill="#854F0B"/>
+  <text x="144" y="1043" fill="#444441" font-size="11">Terminator / pill — owner label (Engineer or TechOps)</text>
+
+  <polygon points="475,1028 520,1040 475,1052 430,1040" fill="#EEEDFE" stroke="#534AB7"/>
+  <text x="534" y="1044" fill="#444441" font-size="11">Decision — workshop question on the fence</text>
+
+  <rect x="900" y="1028" width="90" height="24" fill="#FAEEDA" stroke="#BA7517" stroke-dasharray="4 3"/>
+  <text x="1004" y="1045" fill="#444441" font-size="11">Dashed process — reconstructed, not confirmed for NC</text>
+
+  <text x="40" y="1074" fill="#5F5E5A" font-size="11">Assumption sitting outside the rings: this stack is rebuilt from the Mannheim Network Control Service pattern (about 10–15 jump servers) under a vCloud Director portal used across the software factory. If NC’s real setup differs, the rings still hold. The product names on the dashed boxes may not.</text>
+</svg>
